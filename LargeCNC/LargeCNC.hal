@@ -91,13 +91,13 @@ net spindle-enable motion.spindle-on => parport.0.pin-14-out
 
 #####
 
-#net estop-out => parport.0.pin-16-out
+net estop-out => parport.0.pin-17-out
 
 ##### Light Tower Status Outputs
 
-newsig JobRunning bit
-linksp JobRunning <= parport.0.pin-17-out
-linksp JobRunning => halui.program.is-running
+#newsig JobRunning bit
+#linksp JobRunning <= parport.0.pin-17-out
+#linksp JobRunning => halui.program.is-running
 
 #newsig JobPaused bit
 #linksp JobPaused <= parport.0.pin-14-out
@@ -152,6 +152,5 @@ net tool-change iocontrol.0.tool-change => hal_manualtoolchange.change
 net tool-changed iocontrol.0.tool-changed <= hal_manualtoolchange.changed
 net tool-number iocontrol.0.tool-prep-number => hal_manualtoolchange.number
 net tool-prepare-loopback iocontrol.0.tool-prepare => iocontrol.0.tool-prepared
-
 
 loadusr classicladder --nogui custom.clp
