@@ -61,7 +61,6 @@ net spindle-enable motion.spindle-on => parport.0.pin-14-out
 
 	## X Axis Motor 2 Direction Pin
 	net xdir => parport.0.pin-05-out
-	setp parport.0.pin-05-out-invert 1
 
 ### Y Axis
 
